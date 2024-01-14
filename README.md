@@ -1,37 +1,39 @@
-##Testing Project For Entrata
+## Testing Project For Entrata
 
-###Description
--This particular project is build and testing framework 
+### Description
+- This particular project is build and testing framework 
 for Homepage,ResidentPay and SignUp page.
 
-###Technology Stack
--Java
--Selenium
--TestNg
+### Technology Stack
+- Java
+- Selenium
+- TestNg
 
-###Included in pom.xml for maven dependency
--Selenium
--TestNG
+### Included in pom.xml for maven dependency
+- Selenium
+- TestNG
 
-###Build Automation Tools
--Maven
+### Build Automation Tools
+- Maven
+- Github
 
-###Supported Platforms
--Web Application
+### Supported Platforms
+- Web Application
 
-###Links
+### Links
 - Home Page Link - https://www.entrata.com/
 - Signup Page Link - https://www.entrata.com/sign-in
 - Resident Pay Link- https://www.entrata.com/products/residentpay
 
-###configuration
+### Configuration
 - Change fields value in config.properties file with respective current user type.
 
-###Building and Running
+### Building and Running
 ```shell
 mvn compile
 mvn test
 ```
+### Test cases
 
 | Pages Covered | Test cases                  | Description                                                 | Pass/Fail |
 |---------------|-----------------------------|-------------------------------------------------------------|-----------|
