@@ -14,11 +14,11 @@ public class TestBase {
 
    public static WebDriver driver;
    public static Properties prop;
-
+   //Reading Properties file
    public TestBase() {
       try {
          prop = new Properties();
-         FileInputStream ip = new FileInputStream("C:\\Users\\Sumiran\\IdeaProjects\\EntrataTest\\src\\main\\config.properties");
+         FileInputStream ip = new FileInputStream("C:\\Users\\Sarang\\Documents\\Kasturi_Projects\\Test-Framework\\src\\main\\config.properties");
          prop.load(ip);
       } catch (FileNotFoundException e) {
          e.printStackTrace();
@@ -27,11 +27,11 @@ public class TestBase {
       }
 
    }
-
+   //Browser initialization(change browserName in properties file according to browser usage)
    public static void initialization() {
       String browserName = prop.getProperty("browser");
       if (browserName.equals("Chrome")) {
-         System.setProperty("webdriver.chrome.driver", "C:\\chromedriver-win64\\chromedriver.exe");
+         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Sarang\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
          driver = new ChromeDriver();
       } else if (browserName.equals("Edge")) {
          System.setProperty("webdriver.edge.driver", "C:\\msedgedriver.exe");
@@ -43,6 +43,7 @@ public class TestBase {
       driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
       driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
       driver.get(prop.getProperty("url"));
+      driver.findElement(By.xpath("//button[contains(@id,'rcc-confirm-button')]")).click();
 
    }
 }

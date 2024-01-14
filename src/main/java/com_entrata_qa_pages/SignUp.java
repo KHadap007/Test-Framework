@@ -47,7 +47,6 @@ public class SignUp extends TestBase {
         signUp.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5000));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(@class,'button-default solid-dark-button')]")));
-        driver.findElement(By.xpath("//button[contains(@id,'rcc-confirm-button')]")).click();
         propertyManagerLogin.click();
     }
     public void signUp(String un, String pwd) {
